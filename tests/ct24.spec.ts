@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { HomePage } from '../pages/HomePage';
 
 test('Nejčtenější články', async ({ page }) => {
-  
+  const home = new HomePage(page);
   await page.goto('https://ct24.cz');
 
   const links = page.locator('[aria-label="Rubriky"] a');
@@ -13,27 +14,24 @@ test('Nejčtenější články', async ({ page }) => {
     }))
   );
 
+  async function checkArticles(rubrika: string){
+    await page.goto(rubrika, { waitUntil: 'domcontentloaded' });
+    await home.expectRubrikaUrl(rubrika);
+    await home.waitForLayout();
+    //Nejčtenější články jsou nad patičkou
+    await home.expectNejctenejsiAboveFooter();
+    //Nahrají se články s odkazy
+    await home.expectArticlesLoaded(4);
+    //Články obsahují titulky a první tři články mají fotky
+    await home.expectArticlesHaveTitlesAndThreeImages();
+  }
+
   for (const rubrika of rubriky) {
-    await page.goto(rubrika.url, { waitUntil: 'domcontentloaded' });
-    await expect(page).toHaveURL(rubrika.url);
-    await expect(page.getByRole('heading', { level: 2, name: 'Nejčtenější' })).toBeVisible();
+    await checkArticles(rubrika.url);
+    await home.goTo7Dni();
+    await checkArticles(rubrika.url);
+    await home.goTo24Hodin();
+    await checkArticles(rubrika.url);
   }
 });
 
-
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
