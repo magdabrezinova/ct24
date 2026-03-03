@@ -116,61 +116,61 @@ npx playwright show-trace trace.zip
 
 ### Nejčtenější články – Desktop (>= 768px)
 
-Projde všechny rubriky
+- Projde všechny rubriky
 
-Ověří správnou URL
+- Ověří správnou URL
 
-Ověří, že sekce Nejčtenější je nad patičkou
+- Ověří, že sekce Nejčtenější je nad patičkou
 
-Ověří načtení článků
+- Ověří načtení článků
 
-Ověří, že první tři články obsahují obrázek
+- Ověří, že první tři články obsahují obrázek
 
 Přepíná mezi:
 
-za 24 hodin
+- za 24 hodin
 
-za 7 dní
+- za 7 dní
 
 ### Nejčtenější články – Mobile (< 768px)
 
-Nastaví viewport 600x800
+- Nastaví viewport 600x800
 
-Otevře hamburger menu
+- Otevře hamburger menu
 
-Projde všechny rubriky
+- Projde všechny rubriky
 
-Ověří správné načtení sekce Nejčtenější
+- Ověří správné načtení sekce Nejčtenější
 
 ### Rubrika Domácí
 
-Otevře konkrétní URL
+- Otevře konkrétní URL
 
-Ověří, že sekce Nejčtenější je nahoře vpravo
+- Ověří, že sekce Nejčtenější je nahoře vpravo
 
-Ověří přítomnost nadpisu rubriky
+- Ověří přítomnost nadpisu rubriky
 
-Prokliká všechny články v sidebaru
+- Prokliká všechny články v sidebaru
 
-Ověří URL a nadpis článku
+- Ověří URL a nadpis článku
 
 ### Responsivní design
 
-Nastaví mobilní viewport
+- Nastaví mobilní viewport
 
-Ověří zobrazení hamburger menu
+- Ověří zobrazení hamburger menu
 
 ### Živé vysílání
 
-Otevře live player
+- Otevře live player
 
-Ověří přítomnost video elementu
+- Ověří přítomnost video elementu
 
-Pokusí se obnovit přehrávání tlačítkem Znovu načíst
+- Pokusí se obnovit přehrávání tlačítkem Znovu načíst
 
-Ověří, že se video skutečně přehrává (kontrola změny currentTime)
+- Ověří, že se video skutečně přehrává (kontrola změny currentTime)
 
-Zavře live player
+- Zavře live player
 
 
 ### Architektura
