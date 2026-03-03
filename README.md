@@ -179,15 +179,15 @@ Projekt využívá princip Page Object Model (POM).
 
 Výhody:
 
-centralizované lokátory
+- centralizované lokátory
 
-oddělená testovací logika
+- oddělená testovací logika
 
-lepší čitelnost
+- lepší čitelnost
 
-snadnější údržba
+- snadnější údržba
 
-jednodušší rozšiřitelnost
+- jednodušší rozšiřitelnost
 
 Všechny lokátory jsou definovány jako readonly vlastnosti třídy.
 
@@ -197,7 +197,3 @@ Oddělit jednotlivé page do samostatného Page Objectu
 
 Přidat CI integraci (GitHub Actions)
 
-
-Official Playwright documentation:  
-https://playwright.dev/docs/intro
->>>>>>> 1df4afe55596c5d91fa16a8fb7ab1493b88717c8
