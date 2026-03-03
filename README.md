@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CT24 Playwright Tests
 
 Automatizované end-to-end testy webu https://ct24.cz vytvořené pomocí Playwright a TypeScript.
